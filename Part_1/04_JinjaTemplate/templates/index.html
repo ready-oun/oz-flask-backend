@@ -3,20 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.title }}</title>
+    <title>User List</title>
 </head>
 <body>
-    <h1>Hi, {{ data.user }}</h1>
-
-    {% if data.is_admin %}
-        <p>You have admin priviliges.</p>
-    {% else %}
-        <p>You do not have admin priviliges.</p>
-    {% endif %}
-
     <ul>
-        {% for item in data.item_list %}
-        <li>{{ item }}</li>
+        {% for user in users %}
+            <li>{{ user.username }} : {{ user.name }}</li>
         {% endfor %}
     </ul>
 </body>
